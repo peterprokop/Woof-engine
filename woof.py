@@ -127,11 +127,11 @@ class MainPage(webapp.RequestHandler):
         upload_url = blobstore.create_upload_url('/api/upload_image')
         self.response.out.write('<form action="%s" method="POST" enctype="multipart/form-data">' % upload_url)
         self.response.out.write("""
-                <div><label>Message:</label></div>
+                <div><label>Text:</label></div>
                 <div><textarea name="text" rows="3" cols="60"></textarea></div>
-                <div><label>Avatar:</label></div>
+                <div><label>Image:</label></div>
                 <div><input type="file" name="file"/></div>
-                <div><input type="submit" value="Sign Guestbook"></div>
+                <div><input type="submit" value="Add!"></div>
               </form>
             </body>
           </html>""")
